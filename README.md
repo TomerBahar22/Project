@@ -56,6 +56,8 @@ From your local PC browser:
 ```
 http://<EC2_PUBLIC_IP>:5001/
 ```
+![Architecture Diagram](snapshot.png)
+```
 
 ---
 
