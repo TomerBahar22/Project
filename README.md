@@ -37,7 +37,10 @@ sudo systemctl start docker
 git clone -b Docker https://github.com/TomerBahar22/Project.git
 cd Project/
 ```
-
+###Or docker Hub 
+```bash
+docker pull tomerbahar2/python-web
+```
 ### 4. Build the Docker Image
 ```bash
 sudo docker build -t python-web:latest .
