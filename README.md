@@ -1,4 +1,4 @@
 # Project 
 JohnBryce_Project
 
-# The Docker Project for 7/9 is in a branch called Docker 
+# The Docker part of the Project is in a branch called Docker 
