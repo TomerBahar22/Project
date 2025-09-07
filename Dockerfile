@@ -8,7 +8,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --prefix=/install -r requirements.txt
 
 #Runtime Stage - Run the python app 
-FROM python:3.12-slim AS runtime
+FROM python:3.11 as Runtime
 
 WORKDIR /app
 
