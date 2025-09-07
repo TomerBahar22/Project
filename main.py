@@ -33,15 +33,15 @@ def home():
            })
   
    # Fetch VPCs
-   vpcs = ec2_client.describe_vpcs()
+   vpcs = ec2_client.describe_vpcs() #added the current user vpc to a previous empty argument 
    vpc_data = [{"VPC ID": vpc["VpcId"], "CIDR": vpc["CidrBlock"]} for vpc in vpcs["Vpcs"]]
 
    # Fetch Load Balancers
-   lbs = elb_client.describe_load_balancers()
+   lbs = elb_client.describe_load_balancers() #added the current user lb to a previous empty argument 
    lb_data = [{"LB Name": lb["LoadBalancerName"], "DNS Name": lb["DNSName"]} for lb in lbs["LoadBalancers"]]
 
    # Fetch AMIs (only owned by the account)
-   amis = ec2_client.describe_images(Owners=["self"])
+   amis = ec2_client.describe_images(Owners=["self"]) #added the current user images to a previous empty argument 
    ami_data = [{"AMI ID": ami["ImageId"], "Name": ami.get("Name", "N/A")} for ami in amis["Images"]]
   
    # Render the result in a simple table
